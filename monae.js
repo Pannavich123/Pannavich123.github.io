@@ -66,7 +66,8 @@ window.onload = () => {
   };
 
   document.getElementById('noBtn').onclick = () => {
-    alert('ลองกด "ได้" ดูนะครับ 😉');
+    alert('ให้อภัยเค้านะค้าบ นะๆ 😉');
   };
 };
+
 
