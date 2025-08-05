@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thank You</title>
+<link rel="stylesheet" href="thankyou.css" />
+</head>
+<body>
+
+<div class="thankyou-wrapper">
+  <div class="thankyou-container">
+    <h1>ขอบคุณที่ให้อภัยเราครับ<br>เค้าจะไม่ทำอีกแล้วครับ 😊🙏</h1>
+    
+    <!-- แกะกระโดด คลิกได้ -->
+    <img src="sheep.png.png" alt="Sheep Jump" class="sheep jump-sheep" />
+
+    <!-- ปุ่มกลับไปหน้าแรก อยู่กึ่งกลางกรอบด้านล่าง -->
+    <a href="monae.html" class="back-btn">กลับไปหน้าแรก</a>
+  </div>
+
+  <!-- แกะเดินวนเป็นวงกลมรอบกรอบ -->
+  <div class="sheep-orbit-container">
+    <img src="sheep.png.png" alt="Sheep Orbit 1" class="sheep-orbit sheep1" />
+    <img src="sheep.png.png" alt="Sheep Orbit 2" class="sheep-orbit sheep2" />
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const jumpingSheep = document.querySelector('.jump-sheep');
+
+    jumpingSheep.addEventListener('click', () => {
+      jumpingSheep.classList.add('fly-in');
+
+      jumpingSheep.addEventListener('animationend', () => {
+        jumpingSheep.classList.remove('fly-in');
+        jumpingSheep.style.position = 'relative';
+        jumpingSheep.style.top = '0';
+        jumpingSheep.style.left = '0';
+        jumpingSheep.style.width = '120px';
+        jumpingSheep.style.marginLeft = '';
+        jumpingSheep.style.marginTop = '';
+        jumpingSheep.style.transform = '';
+      }, { once: true });
+    });
+  });
+</script>
+
+</body>
+</html>
